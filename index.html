@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Autocomplete</title>
+  <style>
+    .autocomplete {
+      position: relative;
+      width: 200px;
+    }
+
+    #searchName {
+      width: 100%;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+
+    #suggestions li.active {
+      background: red;
+    }
+
+    #suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid #ccc;
+      background: white;
+      display: none;
+      z-index: 1000;
+    }
+
+    #suggestions ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #suggestions li {
+      padding: 6px;
+      cursor: pointer;
+    }
+
+    #suggestions li:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Javascript testing</h1>
+
+  <div class="autocomplete">
+    <input id="searchName" type="text" value="">
+    <div id="suggestions">
+      <ul id="ul" tabindex="0">
+        <li data-key="apple" index='0' id="apple">Apple</li>
+        <li data-key="ball" index='1'>ball</li>
+        <li data-key="banana" index='2'>banana</li>
+        <li data-key="cat" index='3'>cat</li>
+        <li data-key="dog" index='4'>dog</li>
+        <li data-key="elephant" index='5'>elephant</li>
+      </ul>
+    </div>
+  </div>
+  <h1>asdasd</h1>
+
+  <script src="./inputField.js"></script>
+</body>
+
+</html>
